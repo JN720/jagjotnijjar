@@ -79,9 +79,15 @@ var skillDescs: string[] = [
     "Naturally as a developer, I have worked with Git and specifically used Github repositories for many of my projects. I have also looked" +
     " into Gitlab to get a basic grasp of CI/CD and other parts of DevOps such as Docker and Kubernetes.", 
     "With the modern prevlance of Cloud Computing, I have developed a foundational proficiency in the cloud using AWS. While I have not yet" +
-    " hosted a project using AWS yet for cost reasons, I have practiced with it and have a Cloud Practitioner certification. Likewise, I also" +
+    " hosted a project using AWS yet for cost reasons, I have practiced with it and am working on getting certified. Likewise, I also" +
     " have learned AWS Sagemaker in particular for cloud-based Machine Learning on top of the other basic services.", 
-    "Building on top of my recent experience with React, I have worked with Next to incorporate the base of back-ends", "mongowo", "bootstwap", "fastapi"
+    "Building on top of my recent experience with React, I have worked with Next to incorporate the base of back-ends in a serverless manner" +
+    " and develop in a newer cloud-based approach.", 
+    "Since not all databases are strictly relational like SQL, I also know how to work with MongoDB. In particular, this website uses an Express" +
+    " API to connect to MongoDB.", 
+    "For frontend, I have a good proficiency in Bootstrap to handle making visually appealing websites like this one. Though Bootstrap is" +
+    " somewhat limiting in regards to creative styling, I do plan to learn other CSS frameworks such as Tailwind for future front-end endeavors.", 
+    "In addition to Express, I also know FastAPI to specialize in developing API's, particularly for my AI models as they use Python frameworks."
 ];
 
 function c(n: number) {
