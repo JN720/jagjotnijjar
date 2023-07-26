@@ -1,6 +1,6 @@
-"use client"
-
+"use client";
 import { useState, useRef } from "react";
+"use server";
 const axios = require('axios');
 
 function Prediction(pred: string) {
@@ -48,6 +48,7 @@ async function predict(audio: Blob) {
     }
 }
 
+"use client"
 function Voice() {
     const [permission, setPermission] = useState(false);
     const [audio, setAudio] = useState(null);
