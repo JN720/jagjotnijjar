@@ -49,8 +49,6 @@ function Letter() {
         } else {
             predict(image).then((res: any) => {setLoading(false); setPrediction(res.data.message);}).catch(() => setPrediction("Error"));
         }
-        
-        
     }
     return <>
         <div className = "container-fluid w-100">

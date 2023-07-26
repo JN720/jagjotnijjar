@@ -58,7 +58,7 @@ var skillDescs: string[] = [
     " HTML. Both with Flask and React, I have applied HTML as the foundation of the website structure.",
     "SQL, particularly MySQL and soon Postgres as well, is an essential skill I carry since when it comes to data and performing AI-powered" +
     " analytics for working with databases is essential. Likewise, my database skills fulfil a component of proper Full-Stack Development.",
-    "C# is a language I developed a decent proficiency in beginning few years ago while working with Unity for Game Development. Though I" +
+    "C# is a language I developed a decent proficiency in beginning a few years ago while working with Unity for Game Development. Though I" +
     " use it less often, it still bolsters my abilities to work in several software paradigms due to its versatility.",
     "Because of the prevalance of statistics in AI and Data Science, I have a moderate proficiency in R as well. In particular, I" +
     " applied it in order to use a bioacoustic analysis library for the old model in my Voice Classification Project.",
