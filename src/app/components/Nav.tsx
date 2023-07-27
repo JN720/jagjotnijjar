@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 function Nav(active: number) {
-    return <>
+    return (
         <nav className = "navbar navbar-expand-lg">
             <div className = "container-fluid">
                 <a href = "#"/>
@@ -21,7 +21,7 @@ function Nav(active: number) {
                 </div>
             </div>
         </nav>
-    </>
+    )
 }
 
 export default Nav;
