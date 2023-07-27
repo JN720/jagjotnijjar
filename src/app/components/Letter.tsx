@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+const fs = require('fs')
 const axios = require('axios');
 
 function predict(img: File | null) {
