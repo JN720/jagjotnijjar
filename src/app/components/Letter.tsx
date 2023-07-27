@@ -37,17 +37,20 @@ function Predicting(p: boolean) {
         </div>
 }
 
+const nullFile = new File([], 'nullfile.png');
+
 function Letter() {
-    const [image, setImage] = useState(null);
+    const [image, setImage] = useState(nullFile);
     const [pred, setPrediction] = useState("");
     const [loading, setLoading] = useState(false);
+    const [imageSelected, setImageSelected] = useState(false);
     function handleClick() {
         setLoading(true);
-        if (image == null) {
+        if (image == nullFile || image == null) {
             setPrediction("Null");
             setLoading(false);
         } else {
-            predict(image).then((res: any) => {setLoading(false); setPrediction(res.data.message);}).catch(() => setPrediction("Error"));
+            predict(image).then((res: any) => {setLoading(false); setPrediction(res.data.message);}).catch(() => {setPrediction("Error"); setLoading(false);});
         }
     }
     return <>
@@ -64,7 +67,12 @@ function Letter() {
             <div className = "container w-50 h-50 float-end my-5">
                 <input className = "btn btn-outline-secondary m-2" type = "file" name = "image" accept = "image/png" onChange = {(e) => {
                     e.preventDefault();
-                    setImage(e.target.files[0])}}/>
+                    const newImage = e.target.files?.item(0);
+                    if (newImage) {
+                        setImage(newImage);
+                    }
+                    
+                    }}/>
                 <button className = "btn btn-outline-success m-2" onClick = {() => handleClick()}>Predict</button>
                 {Predicting(loading)}
                 {Prediction(pred)}
