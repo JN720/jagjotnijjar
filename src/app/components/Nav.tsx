@@ -14,7 +14,7 @@ function Nav(active: number) {
                             <Link className = {active == 1 ? "nav-link active" : "text-primary nav-link"} href = "/projects">Projects</Link>
                         </li>
                         <li className = "nav-item">
-                            <Link className = {active == 2 ? "nav-link active" : "text-primary nav-link"} href = "#">idek what this link is supposed to be but it's here</Link>
+                            <Link className = {active == 2 ? "nav-link active" : "text-primary nav-link"} href = "#">idek what this link is supposed to be but its here</Link>
                         </li>
                     </ul>
                     
