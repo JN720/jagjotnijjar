@@ -9,7 +9,7 @@ function predict(img: File | null) {
     const formData = new FormData();
     formData.append("image", img, img.name);
     try {
-        return axios.post("http://localhost:8000/letter", formData);
+        return axios.post("https://main--letter-voice-api.netlify.app/letter", formData);
     } catch {
         return "Error";
     }

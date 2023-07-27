@@ -41,7 +41,7 @@ async function predict(audio: Blob) {
     const file = new File([audio], 'audio.ogg', { type: 'audio/ogg' });
     formData.append("audio", file, file.name);
     try {
-        return axios.post("http://localhost:8000/voice", formData);
+        return axios.post("https://main--letter-voice-api.netlify.app/voice", formData);
     } catch {
         return "Error";
     }
