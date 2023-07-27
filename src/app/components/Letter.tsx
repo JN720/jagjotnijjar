@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-const fs = require('fs')
 const axios = require('axios');
 
 function predict(img: File | null) {
@@ -38,16 +37,15 @@ function Predicting(p: boolean) {
         </div>
 }
 
-const nullFile = new File([], 'nullfile.png');
+
 
 function Letter() {
-    const [image, setImage] = useState(nullFile);
+    const [image, setImage] = useState<File | null | undefined>(null);
     const [pred, setPrediction] = useState("");
     const [loading, setLoading] = useState(false);
-    const [imageSelected, setImageSelected] = useState(false);
     function handleClick() {
         setLoading(true);
-        if (image == nullFile || image == null) {
+        if (image == null || image == undefined) {
             setPrediction("Null");
             setLoading(false);
         } else {
@@ -68,12 +66,8 @@ function Letter() {
             <div className = "container w-50 h-50 float-end my-5">
                 <input className = "btn btn-outline-secondary m-2" type = "file" name = "image" accept = "image/png" onChange = {(e) => {
                     e.preventDefault();
-                    const newImage = e.target.files?.item(0);
-                    if (newImage) {
-                        setImage(newImage);
-                    }
-                    
-                    }}/>
+                    setImage(e.target.files?.item(0));
+                }}/>
                 <button className = "btn btn-outline-success m-2" onClick = {() => handleClick()}>Predict</button>
                 {Predicting(loading)}
                 {Prediction(pred)}
