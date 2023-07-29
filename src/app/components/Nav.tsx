@@ -21,7 +21,7 @@ function Nav(active: number) {
                         </li>
                         <li className = "nav-item">
                             <Link className = "text-primary nav-link mx-2" href = "https://www.linkedin.com/in/jagjot-nijjar-9b6300249/" target = "blank">
-                            <Image src = {lilogo} height = "50" alt = "LinkedIn"/>
+                            <Image src = {lilogo} height = "60" alt = "LinkedIn"/>
                             </Link>
                         </li>
                         <li className = "nav-item">
