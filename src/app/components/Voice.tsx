@@ -7,21 +7,21 @@ function Prediction(pred: string) {
         return;
     }
     if (pred === "Short") {
-        return <h4 className = "text-warning text-start ms-2">The audio you have recorded is too short, it should be at least about 4 seconds.</h4>
+        return <h2 className = "text-warning text-start ms-2">The audio you have recorded is too short, it should be at least about 4 seconds.</h2>
     }
     if (pred === "Incompatible") {
-        return <h4 className = "text-warning text-start ms-2">It seems your browser is not compatible with the recorder, consider using Firefox.</h4>
+        return <h2 className = "text-warning text-start ms-2">It seems your browser is not compatible with the recorder, consider using Firefox.</h2>
     }
     if (pred === "NoPerm") {
-        return <h4 className = "text-warning text-start ms-2">The website requires microphone permission to record.</h4>
+        return <h2 className = "text-warning text-start ms-2">The website requires microphone permission to record.</h2>
     }
     if (pred === "Error") {
-        return <h4 className = "text-danger text-start ms-2">An error occured; the server is likely down.</h4>
+        return <h2 className = "text-danger text-start ms-2">An error occured; the server is likely down.</h2>
     }
     if (pred === "Null") {
-        return <h4 className = "text-warning text-start ms-2">You must record the audio to make a prediction.</h4>
+        return <h2 className = "text-warning text-start ms-2">You must record the audio to make a prediction.</h2>
     }
-    return <h4 className = "text-success text-start ms-2">Prediction: {pred}</h4>
+    return <h2 className = "text-success text-start ms-2">Prediction: {pred}</h2>
 }
 
 function Predicting(p: boolean) {
@@ -117,10 +117,10 @@ function Voice() {
     }
     return <>
         <div className = "container-fluid w-100">
-            <h1 className = "text-primary text-center">Voice Gender Classification</h1>
-            <h2 className = "text-secondary text-center">Spectral Analysis and Bioacoustics using Deep Learning</h2>
+            <h1 className = "text-primary text-center" style = {{fontSize : 90}}>Voice Classification</h1>
+            <h1 className = "text-secondary text-center">Spectral Analysis and Bioacoustics using Deep Learning</h1>
         </div>
-        <div className = "container w-50 h-50 float-start">
+        <div className = "container float-start w-50 h-50">
             {!recording ? (<button className = "btn btn-outline-info m-2" onClick = {() => handleBeginRecord()}>Begin Recording</button>) : null}
             {(permission && recording) ? (<button className = "btn btn-outline-danger m-2" onClick = {() => handleEndRecord()}>End Recording</button>) : null}
             {canPredict ? (<button className = "btn btn-outline-success m-2" onClick = {() => handleClick(audio)}>Predict</button>) : null}
@@ -129,8 +129,8 @@ function Voice() {
             {audio ? (<audio className = "m-2" src = {URL.createObjectURL(audio)} controls/>) : null}
             {Prediction(prediction)}
         </div>
-        <div className = "container w-50 h-50 float-end">
-            <p className = "text-primary">
+        <div className = "container float-start w-50 h-50">
+            <p className = "text-primary fs-4">
                 As my first venture into audio-based machine learning, I built this classifier to recognize voice audio 
                 and attempt to discern the gender of the speaker. The first model employs a Mel Spectrogram in order to
                 create a 2D representation of the audio frequencies, which is fed into a convolutional neural network.

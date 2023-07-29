@@ -20,12 +20,12 @@ function Prediction(pred: string) {
         return ""
     }
     if (pred === "Error") {
-        return <h4 className = "text-danger text-start ms-2">An error occured; the server is likely down.</h4>
+        return <h2 className = "text-danger text-start ms-2">An error occured; the server is likely down.</h2>
     }
     if (pred === "Null") {
-        return <h4 className = "text-warning text-start ms-2">You must specify a file.</h4>
+        return <h2 className = "text-warning text-start ms-2">You must specify a file.</h2>
     }
-    return <h4 className = "text-success text-start ms-2">Prediction: {pred}</h4>
+    return <h2 className = "text-success text-start ms-2">Prediction: {pred}</h2>
 }
 
 function Predicting(p: boolean) {
@@ -53,22 +53,22 @@ function Letter() {
         }
     }
     return <>
-        <div className = "container-fluid w-100">
-            <h1 className = "text-primary text-center w-100">Handwritten Letter Detection</h1>
-            <h2 className = "text-secondary text-center w-100">Computer Vision and Full-Stack AI Deployment</h2>
-            <div className = "container w-50 h-50 float-start my-5">
-                <p className = "text-primary">
+        <div className = "container w-100">
+            <h1 className = "text-primary text-center" style = {{fontSize : 100}}>Handwritten Letter Detection</h1>
+            <h1 className = "text-secondary text-center">Computer Vision and Full-Stack AI Deployment</h1>
+            <div className = "container float-start w-50 h-50">
+                <p className = "text-primary fs-4">
                     This project is a revamp of an earlier Keras model, now made in PyTorch. Originally, the project used Flask and standard HTML in Jinja templates, however
                     in the current rendition, it runs using Next.js with React. The inference endpoint, deployed on a FastAPI server, is accessed indirectly by the standalone
                     Express.js API which itself is hooked up to MongoDB to store all images and predictions done on this website for analytics purposes.
                 </p>
             </div>
-            <div className = "container w-50 h-50 float-end my-5">
-                <input className = "btn btn-outline-secondary m-2" type = "file" name = "image" accept = "image/png" onChange = {(e) => {
+            <div className = "container float-start w-50 h-50">
+                <input className = "btn btn-outline-secondary m-2 fs-3" type = "file" name = "image" accept = "image/png" onChange = {(e) => {
                     e.preventDefault();
                     setImage(e.target.files?.item(0));
                 }}/>
-                <button className = "btn btn-outline-success m-2" onClick = {() => handleClick()}>Predict</button>
+                <button className = "btn btn-outline-success m-2 fs-3" onClick = {() => handleClick()}>Predict</button>
                 {Predicting(loading)}
                 {Prediction(pred)}
             </div>
