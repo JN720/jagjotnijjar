@@ -102,27 +102,32 @@ function c(n: number) {
     return [ec, ec, ec, ec, ec]
 }
 
-var skillProfs: StaticImageData[][] = [
+/*var skillProfs: StaticImageData[][] = [
     c(5), c(5), c(4), c(4), c(4), c(4), c(3), c(3), c(5), c(5), c(4), c(5), c(4), c(3), c(5), c(3), c(3), c(3), c(3), c(3)
 ];
+*/
+
+const skillProfs = [
+    5, 5, 4, 4, 4, 4, 3, 3, 5, 5, 4, 5, 4, 3, 3, 3, 3, 3, 3, 3
+]
 
 function skillCircle(index: number, size: number) {
     return <div className = "hstack gap-1 mx-auto pb-3">
-        <Image className = "float-start" src = {skillProfs[index][0]} height = {size} alt = "*"/>
-        <Image className = "float-start" src = {skillProfs[index][1]} height = {size} alt = "*"/>
-        <Image className = "float-start" src = {skillProfs[index][2]} height = {size} alt = "*"/>
-        <Image className = "float-start" src = {skillProfs[index][3]} height = {size} alt = "*"/>
-        <Image className = "float-start" src = {skillProfs[index][4]} height = {size} alt = "*"/>
+        <Image className = "float-start" src = {c(skillProfs[index])[0]} height = {size} alt = "*"/>
+        <Image className = "float-start" src = {c(skillProfs[index])[1]} height = {size} alt = "*"/>
+        <Image className = "float-start" src = {c(skillProfs[index])[2]} height = {size} alt = "*"/>
+        <Image className = "float-start" src = {c(skillProfs[index])[3]} height = {size} alt = "*"/>
+        <Image className = "float-start" src = {c(skillProfs[index])[4]} height = {size} alt = "*"/>
     </div>
 }
 
 function listSkill(index: number, size: number) {
     return <>
         <div className = "card align-items-center align-text-center px-3 h-100">
-            <Image src = {skillImages[index]} className = "align-self-center mt-2" height = {size} alt = {skillNames[index] + " Logo"}/>
+            <Image src = {skillImages[index]} className = {"align-self-center mt-2"} height = {size} alt = {skillNames[index] + " Logo"}/>
             <div className = "card-body">
-                <h4 className = "card-title text-primary text-center">{skillNames[index]}</h4>
-                <p className = "card-text text-secondary">{skillDescs[index]}</p>
+                <h2 className = "card-title text-primary text-center">{skillNames[index]}</h2>
+                <p className = "card-text fs-5">{skillDescs[index]}</p>
             </div>
             {skillCircle(index, 40)}
         </div>
@@ -132,8 +137,8 @@ function listSkill(index: number, size: number) {
 
 function Skills(size: number) {
     return <>
-        <div className = "align-items-center align-text-center pt-5">
-            <h2 className = "text-info text-center pb-5">What do I know?</h2>
+        <div className = "align-items-center align-text-center py-5">
+            <h1 className = "text-info text-center pb-5">What do I know?</h1>
             <div className = "container-fluid gap-1 align-text-center">
                 {skills.map(skillset => {
                     return <div className = "row" key = {`r_${skillset[0]}`}>

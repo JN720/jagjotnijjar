@@ -1,10 +1,10 @@
 
 
-function Name() {
+function Name(fontSize: number) {
     return (
-        <div className = "card align-items-center pt-5 pb-3">
-            <h1>Greetings,</h1>
-            <h1>my name is Jagjot Nijjar</h1>
+        <div className = "card align-items-center py-4">
+            <h1 style = {{fontSize : fontSize}}>Greetings,</h1>
+            <h1 style = {{fontSize : fontSize}}>my name is Jagjot</h1>
         </div>
     )
 }
