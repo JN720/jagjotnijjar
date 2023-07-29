@@ -53,17 +53,17 @@ function Letter() {
         }
     }
     return <>
-        <div className = "container w-100">
+        <div className = "container">
             <h1 className = "text-primary text-center" style = {{fontSize : 100}}>Handwritten Letter Detection</h1>
             <h1 className = "text-secondary text-center">Computer Vision and Full-Stack AI Deployment</h1>
-            <div className = "container float-start w-50 h-50">
+            <div className = "container w-50 h-50 float-start">
                 <p className = "text-primary fs-4">
                     This project is a revamp of an earlier Keras model, now made in PyTorch. Originally, the project used Flask and standard HTML in Jinja templates, however
                     in the current rendition, it runs using Next.js with React. The inference endpoint, deployed on a FastAPI server, is accessed indirectly by the standalone
                     Express.js API which itself is hooked up to MongoDB to store all images and predictions done on this website for analytics purposes.
                 </p>
             </div>
-            <div className = "container float-start w-50 h-50">
+            <div className = "container w-50 h-50 float-end">
                 <input className = "btn btn-outline-secondary m-2 fs-3" type = "file" name = "image" accept = "image/png" onChange = {(e) => {
                     e.preventDefault();
                     setImage(e.target.files?.item(0));
