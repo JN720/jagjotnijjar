@@ -14,7 +14,13 @@ function Nav(active: number) {
                             <Link className = {active == 1 ? "nav-link active" : "text-primary nav-link"} href = "/projects">Projects</Link>
                         </li>
                         <li className = "nav-item">
-                            <Link className = {active == 2 ? "nav-link active" : "text-primary nav-link"} href = "#">idek what this link is supposed to be but its here</Link>
+                            <Link className = {active == 2 ? "nav-link active" : "text-primary nav-link"} href = "#">Coming Soon</Link>
+                        </li>
+                        <li className = "nav-item">
+                            <Link className = "text-primary nav-link" href = "https://www.linkedin.com/in/jagjot-nijjar-9b6300249/" target = "blank">LinkedIn</Link>
+                        </li>
+                        <li className = "nav-item">
+                            <Link className = "text-primary nav-link" href = "https://github.com/JN720" target = "blank">Github</Link>
                         </li>
                     </ul>
                     
