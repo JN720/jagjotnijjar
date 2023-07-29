@@ -24,7 +24,7 @@ import ec from "./assets/ec.png";
 import fc from "./assets/fc.png";
 
 
-var skills: number[][] = [
+const skills: number[][] = [
     [0, 1, 2, 3],
     [4, 5, 6, 7],
     [8, 9, 10, 11],
@@ -32,19 +32,19 @@ var skills: number[][] = [
     [16, 17, 18, 19]
 ];
 
-var skillNames: string[] = [
+const skillNames: string[] = [
     "Python", "C++", "JavaScript", "Java", "HTML", "SQL", "C#", "R", "PyTorch", 
     "Keras", "Sci-Kit Learn", "Flask", "Express", "React", "Git", "Amazon Web Services",
     "Next", "MongoDB", "Bootstrap", "FastAPI"
 ];
 
-var skillImages: StaticImageData[] = [
+const skillImages: StaticImageData[] = [
     pylogo, cpplogo, jslogo, javalogo, htmllogo, sqllogo, csharplogo, rlogo, torchlogo, 
     keraslogo, sklearnlogo, flasklogo, expresslogo, reactlogo, gitlogo, awslogo, nextlogo,
     mongologo, bslogo, falogo
 ];
 
-var skillDescs: string[] = [
+const skillDescs: string[] = [
     "I have worked with Python for several years and since 2021 have been using it for building machine learning models using" +
     " ML frameworks such as PyTorch, Keras, and Sci-Kit Learn as well as Flask for web development.",
     "As my second strongest language, I have extensively used C++ throughout the past 2 years and have applied it in a version" +

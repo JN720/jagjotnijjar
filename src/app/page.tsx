@@ -2,6 +2,7 @@ import Name from "./components/Name";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Nav from "./components/Nav";
+import Learning from "./components/Learning";
 
 function Home() {
   return <>
@@ -9,6 +10,7 @@ function Home() {
     {Name(90)}
     <About/>
     {Skills(150)}
+    {Learning(200)}
   </>
   
 }
