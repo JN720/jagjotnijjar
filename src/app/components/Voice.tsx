@@ -111,7 +111,7 @@ function Voice() {
         if (audio == null) {
             setPrediction("Null")
         } else {
-            predict(audio).then((res: any) => {setLoading(false); setPrediction(res.data.message);}).catch(() => setPrediction("Error"));
+            predict(audio).then((res: any) => {setLoading(false); setPrediction(res.data.message);}).catch(() => {setLoading(false); setPrediction("Error");});
         }
         
     }
@@ -121,9 +121,9 @@ function Voice() {
             <h1 className = "text-secondary text-center">Spectral Analysis and Bioacoustics using Deep Learning</h1>
         </div>
         <div className = "container float-start w-50 h-50">
-            {!recording ? (<button className = "btn btn-outline-info m-2" onClick = {() => handleBeginRecord()}>Begin Recording</button>) : null}
-            {(permission && recording) ? (<button className = "btn btn-outline-danger m-2" onClick = {() => handleEndRecord()}>End Recording</button>) : null}
-            {canPredict ? (<button className = "btn btn-outline-success m-2" onClick = {() => handleClick(audio)}>Predict</button>) : null}
+            {!recording ? (<button className = "btn btn-outline-info m-2 fs-3" onClick = {() => handleBeginRecord()}>Begin Recording</button>) : null}
+            {(permission && recording) ? (<button className = "btn btn-outline-danger m-2 fs-3" onClick = {() => handleEndRecord()}>End Recording</button>) : null}
+            {canPredict ? (<button className = "btn btn-outline-success m-2 fs-3" onClick = {() => handleClick(audio)}>Predict</button>) : null}
             {Predicting(loading)}
             <div className = "container w-50"></div>
             {audio ? (<audio className = "m-2" src = {URL.createObjectURL(audio)} controls/>) : null}

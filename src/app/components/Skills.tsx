@@ -137,7 +137,7 @@ function listSkill(index: number, size: number) {
 
 function Skills(size: number) {
     return <>
-        <div className = "align-items-center align-text-center py-5">
+        <div className = "align-items-center align-text-center pt-5">
             <h1 className = "text-info text-center pb-5">What do I know?</h1>
             <div className = "container-fluid gap-1 align-text-center">
                 {skills.map(skillset => {
