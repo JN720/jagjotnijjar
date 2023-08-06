@@ -2,7 +2,7 @@
 import { useState } from "react";
 const axios = require('axios');
 
-function predict(img: File | null) {
+async function predict(img: File | null) {
     if (img == null) {
         return "";
     }
