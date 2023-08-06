@@ -59,9 +59,10 @@ function Letter() {
             <h1 className = "text-secondary text-center">Computer Vision and Full-Stack AI Deployment</h1>
             <div className = "container w-50 h-50 float-start">
                 <p className = "text-primary fs-4">
-                    This project is a revamp of an earlier Keras model, now made in PyTorch. Originally, the project used Flask and standard HTML in Jinja templates, however
-                    in the current rendition, it runs using Next.js with React. The inference endpoint, deployed on a FastAPI server, is accessed indirectly by the standalone
-                    Express.js API which itself is hooked up to MongoDB to store all images and predictions done on this website for analytics purposes.
+                    This project is a revamp of an earlier Keras model, now made in PyTorch. Originally, the project used Flask and standard HTML in Jinja 
+                    templates, however in the current rendition, it runs using Next.js with React. The inference endpoint is deployed on a FastAPI server 
+                    hosted on Microsoft Azure and an Express.js API hosted on AWS is hooked up to MongoDB to store all images used on this website for 
+                    future analytics purposes.
                 </p>
             </div>
             <div className = "container w-50 h-50 float-end">

@@ -133,10 +133,10 @@ function Voice() {
         <div className = "container float-start w-50 h-50">
             <p className = "text-primary fs-4">
                 As my first venture into audio-based machine learning, I built this classifier to recognize voice audio 
-                and attempt to discern the gender of the speaker. The first model employs a Mel Spectrogram in order to
-                create a 2D representation of the audio frequencies, which is fed into a convolutional neural network.
-                The second utilizes the WarbleR library, which has function to obtain various frequency analysis metrics
-                which are then fed into a standard feed-forward network.
+                and attempt to discern the gender of the speaker. The first model, and the one deployed here, employs a 
+                Mel Spectrogram in order to create a 2D representation of the audio frequencies, which is fed into a 
+                convolutional neural network. The second utilizes the WarbleR library, which has a function to obtain 
+                various frequency analysis metrics which are then fed into a standard feed-forward network.
             </p>
         </div>
     </>
