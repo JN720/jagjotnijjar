@@ -68,7 +68,7 @@ const skillDescs: string[] = [
     "Before I learned lower-level Deep Learning with PyTorch, I used Keras. As the fundamentals of my Deep Learning knowledge, my skills with" +
     " Keras have grown in a similar manner to those of PyTorch, likewise with a similar fervor.", 
     "Before I learned Deep Learning, I began with vanilla Machine Learning using Sci-Kit Learn. In particular, I used it as well as Keras at" +
-    "Inspirit AI, and used it in multiple smaller preliminary projects there. I also plan to learn XGBoost to gain a stronger proficiency" +
+    " Inspirit AI, and used it in multiple smaller preliminary projects there. I also plan to learn XGBoost to gain a stronger proficiency" +
     " with Tree-Based methods, as they can outperform Deep Learning in some cases.", 
     "With Python as my best language, my first AI deployment was, naturally, in Flask. As my first back-end framework, my Flask skills have" +
     " grown more robust as I have dived deeper into back-end development as part of learning Full-Stack.",
