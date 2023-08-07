@@ -9,7 +9,7 @@ async function predict(img: File | null) {
     const formData = new FormData();
     formData.append("image", img, img.name);
     try {
-        axios.post("https://dwch3v3vay.us-west-2.awsapprunner.com/letter", formData)
+        axios.post("https://upheld-modem-395202.wl.r.appspot.com/letter", formData)
         return axios.post("https://lettervoiceapis.azurewebsites.net/letter", formData);
     } catch {
         return "Error";

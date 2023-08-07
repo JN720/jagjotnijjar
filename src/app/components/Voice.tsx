@@ -41,7 +41,7 @@ async function predict(audio: Blob) {
     const file = new File([audio], 'audio.ogg', { type: 'audio/ogg' });
     formData.append("audio", file, file.name);
     try {
-        axios.post("https://dwch3v3vay.us-west-2.awsapprunner.com/voice", formData)
+        axios.post("https://upheld-modem-395202.wl.r.appspot.com/voice", formData)
         return axios.post("https://lettervoiceapis.azurewebsites.net/voice", formData);
     } catch {
         return "Error";
