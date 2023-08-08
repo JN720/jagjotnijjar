@@ -7,7 +7,7 @@ import Learning from "./components/Learning";
 function Home() {
   return <>
     {Nav(0)}
-    {Name(90)}
+    <Name/>
     <About/>
     {Skills(150)}
     {Learning(200)}
