@@ -1,5 +1,6 @@
 "use client";
-import { useState, useRef } from "react";
+import "./anim.css";
+import { useState, useRef, useEffect } from "react";
 const axios = require('axios');
 
 function Prediction(pred: string) {
@@ -56,8 +57,13 @@ function Voice() {
     const [loading, setLoading] = useState(false);
     const [recording, setRecording] = useState(false);
     const [canPredict, setCanPredict] = useState(false);
+    const [anim, setAnim] = useState(true);
     const recorder: any = useRef(null);
     
+    useEffect(() => {
+        setAnim(false);
+    }, [])
+
     async function handlePermission() {
         if ("MediaRecorder" in window) {
             try {
@@ -116,7 +122,7 @@ function Voice() {
         }
         
     }
-    return <>
+    return <div className = {"trans-5" + (anim ? " fade right" : "")}>
         <div className = "container-fluid w-100">
             <h1 className = "text-primary text-center" style = {{fontSize : 90}}>Voice Classification</h1>
             <h1 className = "text-secondary text-center">Spectral Analysis and Bioacoustics using Deep Learning</h1>
@@ -139,7 +145,7 @@ function Voice() {
                 various frequency analysis metrics which are then fed into a standard feed-forward network.
             </p>
         </div>
-    </>
+    </div>
 }
 
 export default Voice;

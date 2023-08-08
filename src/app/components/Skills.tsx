@@ -76,8 +76,8 @@ const skillDescs: string[] = [
     " for the API to connect to MongoDB.",
     "Just as important as back-end development is for Full-Stack, I recently began building up my front-end skills with React. I have spent" +
     " significant time working with React lately as to be able to build visually compelling websites and add satisfying interactivity.", 
-    "Naturally as a developer, I have worked with Git and specifically used Github repositories for many of my projects. I have also looked" +
-    " into Gitlab to get a basic grasp of CI/CD and other parts of DevOps such as Docker and Kubernetes.", 
+    "Naturally as a developer, I have worked with Git and specifically used Github repositories for many of my projects. I have also used" +
+    " other Git providers like Bitbucket to get a basic grasp of CI/CD, which involves other parts of DevOps I know such as Docker and Kubernetes.", 
     "With the modern prevlance of Cloud Computing, I have developed a foundational proficiency in the cloud using AWS. While I have not yet" +
     " hosted a project using AWS yet for cost reasons, I have practiced with it and am working on getting certified. Likewise, I also" +
     " have learned AWS Sagemaker in particular for cloud-based Machine Learning on top of the other basic services.", 
@@ -127,7 +127,7 @@ function listSkill(index: number, size: number) {
             <Image src = {skillImages[index]} className = {"align-self-center mt-2"} height = {size} alt = {skillNames[index] + " Logo"}/>
             <div className = "card-body">
                 <h2 className = "card-title text-primary text-center">{skillNames[index]}</h2>
-                <p className = "card-text fs-5">{skillDescs[index]}</p>
+                <p className = "card-text fs-5 text-center">{skillDescs[index]}</p>
             </div>
             {skillCircle(index, 40)}
         </div>
