@@ -1,6 +1,15 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import "./anim.css";
+
 function About() {
+    const [anim, setAnim] = useState(true);
+    useEffect(() => {
+        setAnim(false);
+    }, [])
     return (
-    <div className = "card w-75 px-4 py-4">
+    <div className = {"card w-75 px-4 py-4 trans-5" + (anim ? " fade left": "")}>
         <h1 className = "text-info">Who am I?</h1>
         <p className = "fs-3">
             I am a Computer Science student and aspiring AI Engineer.

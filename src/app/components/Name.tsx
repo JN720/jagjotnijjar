@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from "react";
-import "./Name.css";
+import "./anim.css";
 
 
 function Name() {
@@ -10,7 +10,7 @@ function Name() {
         setAnim(false);
     }, [])
     return (
-        <div className = {"card align-items-center py-4" + (anim ? " fade" : "")} style = {{transition : "opacity 300ms"}}>
+        <div className = {"card align-items-center py-4 trans-3" + (anim ? " fade" : "")}>
             <h1 style = {{fontSize : 90}}>Greetings,</h1>
             <h1 style = {{fontSize : 90}}>my name is Jagjot</h1>
         </div>
