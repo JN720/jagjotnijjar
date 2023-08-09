@@ -17,8 +17,8 @@ function KC() {
                 <p className = "text-primary fs-4 px-4">
                     As my current pinnacle of Reinforcement Learning and one of my Game Design ventures, I created an
                     adaptation of a CLI game I made in Python and later ported to C++. Built with machine learning in mind,
-                    I utilized PyGame for the game to be compatible as an RL environment. Compared to the original "Chance",
-                    "Kinetic Chance" uses 2 dynamically moving players and involves aiming and dodging moves, unlike the
+                    I utilized PyGame for the game to be compatible as an RL environment. Compared to the original &quot;Chance&quot;,
+                    &quot;Kinetic Chance&quot; uses 2 dynamically moving players and involves aiming and dodging moves, unlike the
                     original turn-based version. Likewise, the move system is a superset of the former version, with 2
                     contrasting methods to build up moves. As for the Competitive Multi-Agent Reinforcement Learning,
                     I made small adaptations from the base game to create a training environment, where I formulated reward
