@@ -6,7 +6,7 @@ async function predict(img: File | null) {
         return "";
     }
     const formData = new FormData();
-    formData.append("image", img, img.name);
+    formData.append("image", img, "image.png");
     try {
         axios.post("https://upheld-modem-395202.wl.r.appspot.com/letter", formData)
         return axios.post("https://lettervoiceapis.azurewebsites.net/letter", formData);
@@ -67,14 +67,17 @@ function Canvas() {
     function handleClick() {
         setLoading(true);
         const canvas: any = canvasRef.current;
-        const image = canvas.toBlob('image/png');
-
-        if (image == null || image == undefined) {
-            setPrediction("Null");
-            setLoading(false);
-        } else {
-            predict(image).then((res: any) => {setLoading(false); setPrediction(res.data.message);}).catch(() => {setPrediction("Error"); setLoading(false);});
-        }
+        let image: File | undefined;
+        canvas.toBlob((blob: Blob) => {
+            image = new File([blob], "image.png", { type: "image/png" })
+            console.log(image);
+            if (image == null || image == undefined) {
+                setPrediction("Null");
+                setLoading(false);
+            } else {
+                predict(image).then((res: any) => {setLoading(false); setPrediction(res.data.message);}).catch(() => {setPrediction("Error"); setLoading(false);});
+            }
+        }, 'image/png');
     }
 
     return <>
