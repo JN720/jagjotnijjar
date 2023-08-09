@@ -7,6 +7,7 @@ function Projects() {
     return <>
         {Nav(1)}
         <KC/>
+        <div className = "hidden w-100 text-light">-</div>
         <Voice/>
         <Letter/>
     </>

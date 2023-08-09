@@ -122,8 +122,8 @@ function Voice() {
         }
         
     }
-    return <div className = {"trans-5" + (anim ? " fade right" : "")}>
-        <div className = "container-fluid w-100">
+    return <div className = {"w-100 trans-5" + (anim ? " fade right" : "")}>
+        <div className = "w-100 align-items-center">
             <h1 className = "text-primary text-center" style = {{fontSize : 90}}>Voice Classification</h1>
             <h1 className = "text-secondary text-center">Spectral Analysis and Bioacoustics using Deep Learning</h1>
         </div>

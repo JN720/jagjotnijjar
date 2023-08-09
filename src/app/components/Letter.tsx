@@ -60,8 +60,8 @@ function Letter() {
             predict(image).then((res: any) => {setLoading(false); setPrediction(res.data.message);}).catch(() => {setPrediction("Error"); setLoading(false);});
         }
     }
-    return <div className = {"trans-7" + (anim ? " fade up" : "")}>
-        <div className = "w-100">
+    return (
+        <div className = {"w-100 trans-7" + (anim ? " fade up" : "")}>
             <h1 className = "text-primary text-center" style = {{fontSize : 100}}>Handwritten Letter Detection</h1>
             <h1 className = "text-secondary text-center">Computer Vision and Full-Stack AI Deployment</h1>
             <div className = "container float-start w-50">
@@ -84,7 +84,7 @@ function Letter() {
                 <Canvas/>
             </div>
         </div>
-    </div>
+    )
 }
 
 export default Letter;
