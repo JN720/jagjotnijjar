@@ -1,4 +1,3 @@
-"use client";
 import { useState, useRef } from 'react';
 const axios = require('axios');
 
@@ -52,7 +51,7 @@ function Canvas() {
         const x = e.clientX - ctx.canvas.getBoundingClientRect().left;
         const y = e.clientY - ctx.canvas.getBoundingClientRect().top;
         ctx.beginPath();
-        ctx.arc(x, y, 5, 0, Math.PI * 2);
+        ctx.arc(x, y, 15, 0, Math.PI * 2);
         ctx.fillStyle = 'black';
         ctx.fill();
         ctx.closePath();
@@ -86,13 +85,11 @@ function Canvas() {
         <button className = "btn btn-outline-success m-2 fs-3" onClick = {() => handleClick()}>Predict</button>
         {Predicting(loading)}
         {Prediction(pred)}
-        <form>
-            <canvas className = "border-2 border-primary float-start m-2" ref = {canvasRef} width = "300" height = "300" style = {{border: "3px solid #000000"}}
-                onMouseMove = {(e) => handleMouseMove(e)}
-                onMouseDown = {() => {clicked = true;}}
-                onMouseUp = {() => {clicked = false;}}>
-            </canvas>
-        </form>
+        <canvas className = "border-2 border-primary float-start m-2" ref = {canvasRef} width = "300" height = "300" style = {{border: "3px solid #000000"}}
+            onMouseMove = {(e) => handleMouseMove(e)}
+            onMouseDown = {() => {clicked = true;}}
+            onMouseUp = {() => {clicked = false;}}>
+        </canvas>
     </>
 }
 
