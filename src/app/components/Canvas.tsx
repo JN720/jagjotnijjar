@@ -71,12 +71,11 @@ function Canvas() {
         let image: File | undefined;
         canvas.toBlob((blob: Blob) => {
             image = new File([blob], "image.png", { type: "image/png" })
-            console.log(image);
             if (image == null || image == undefined) {
                 setPrediction("Null");
                 setLoading(false);
             } else {
-                predict(image).then((res: any) => {setLoading(false); setPrediction(res.data.message);}).catch(() => {setPrediction("Error"); setLoading(false);});
+                predict(image).then((res: any) => {setLoading(false); setPrediction(res.data.message);}).catch((e) => {setPrediction(e.toString()); setLoading(false);});
             }
         }, 'image/png');
     }
