@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useRef } from 'react';
 const axios = require('axios');
 
@@ -87,11 +87,13 @@ function Canvas() {
         <button className = "btn btn-outline-success m-2 fs-3" onClick = {() => handleClick()}>Predict</button>
         {Predicting(loading)}
         {Prediction(pred)}
-        <canvas className = "border-2 border-primary float-start m-2" ref = {canvasRef} width = "300" height = "300" style = {{border: "3px solid #000000"}}
-            onMouseMove = {(e) => handleMouseMove(e)}
-            onMouseDown = {() => {clicked = true;}}
-            onMouseUp = {() => {clicked = false;}}>
-        </canvas>
+        <form>
+            <canvas className = "border-2 border-primary float-start m-2" ref = {canvasRef} width = "300" height = "300" style = {{border: "3px solid #000000"}}
+                onMouseMove = {(e) => handleMouseMove(e)}
+                onMouseDown = {() => {clicked = true;}}
+                onMouseUp = {() => {clicked = false;}}>
+            </canvas>
+        </form>
     </>
 }
 
