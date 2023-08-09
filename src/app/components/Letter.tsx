@@ -1,7 +1,8 @@
 "use client";
 
 import Canvas from "./Canvas";
-import { useState, useRef, useEffect } from "react";
+import "./anim.css";
+import { useState, useEffect } from "react";
 const axios = require('axios');
 
 async function predict(img: File | null) {
@@ -45,6 +46,10 @@ function Letter() {
     const [image, setImage] = useState<File | null | undefined>(null);
     const [pred, setPrediction] = useState("");
     const [loading, setLoading] = useState(false);
+    const [anim, setAnim] = useState(true);
+    useEffect(() => {
+        setAnim(false);
+    }, [])
 
     function handleClick() {
         setLoading(true);
@@ -55,19 +60,19 @@ function Letter() {
             predict(image).then((res: any) => {setLoading(false); setPrediction(res.data.message);}).catch(() => {setPrediction("Error"); setLoading(false);});
         }
     }
-    return <>
-        <div className = "container">
+    return <div className = {"trans-7" + (anim ? " fade up" : "")}>
+        <div className = "w-100">
             <h1 className = "text-primary text-center" style = {{fontSize : 100}}>Handwritten Letter Detection</h1>
             <h1 className = "text-secondary text-center">Computer Vision and Full-Stack AI Deployment</h1>
-            <div className = "container w-50 h-50 float-start">
-                <p className = "text-primary fs-4">
+            <div className = "container float-start w-50">
+                <p className = "text-primary fs-4 ps-4">
                     This project is a revamp of an earlier Keras model, now made in PyTorch. Originally, the project used Flask and standard HTML in Jinja 
                     templates, however in the current rendition, it runs using Next.js with React. The inference endpoint is deployed on a FastAPI server 
                     hosted on Microsoft Azure and an Express.js API hosted on AWS is hooked up to MongoDB to store all images used on this website for 
                     future analytics purposes.
                 </p>
             </div>
-            <div className = "container w-50 h-50 float-end">
+            <div className = "container w-50 float-end">
                 <input className = "btn btn-outline-secondary m-2 fs-3" type = "file" name = "image" accept = "image/png" onChange = {(e) => {
                     e.preventDefault();
                     setImage(e.target.files?.item(0));
@@ -78,9 +83,8 @@ function Letter() {
                 <div className = "w-100"></div>
                 <Canvas/>
             </div>
-            
         </div>
-    </>
+    </div>
 }
 
 export default Letter;

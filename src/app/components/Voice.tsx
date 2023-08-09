@@ -127,7 +127,7 @@ function Voice() {
             <h1 className = "text-primary text-center" style = {{fontSize : 90}}>Voice Classification</h1>
             <h1 className = "text-secondary text-center">Spectral Analysis and Bioacoustics using Deep Learning</h1>
         </div>
-        <div className = "container float-start w-50 h-50">
+        <div className = "container float-start w-25 h-50">
             {!recording ? (<button className = "btn btn-outline-info m-2 fs-3" onClick = {() => handleBeginRecord()}>Begin Recording</button>) : null}
             {(permission && recording) ? (<button className = "btn btn-outline-danger m-2 fs-3" onClick = {() => handleEndRecord()}>End Recording</button>) : null}
             {canPredict ? (<button className = "btn btn-outline-success m-2 fs-3" onClick = {() => handleClick(audio)}>Predict</button>) : null}
@@ -136,8 +136,8 @@ function Voice() {
             {audio ? (<audio className = "m-2" src = {URL.createObjectURL(audio)} controls/>) : null}
             {Prediction(prediction)}
         </div>
-        <div className = "container float-start w-50 h-50">
-            <p className = "text-primary fs-4">
+        <div className = "float-end w-75 h-50">
+            <p className = "text-primary fs-4 pe-4">
                 As my first venture into audio-based machine learning, I built this classifier to recognize voice audio 
                 and attempt to discern the gender of the speaker. The first model, and the one deployed here, employs a 
                 Mel Spectrogram in order to create a 2D representation of the audio frequencies, which is fed into a 

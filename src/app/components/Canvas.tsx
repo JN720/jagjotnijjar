@@ -78,16 +78,16 @@ function Canvas() {
     }
 
     return <>
-        <canvas className = "border-2 border-primary float-end m-2" ref = {canvasRef} width = "300" height = "300" style = {{border: "3px solid #000000"}}
-            onMouseMove = {(e) => handleMouseMove(e)}
-            onMouseDown = {() => {clicked = true;}}
-            onMouseUp = {() => {clicked = false;}}>
-        </canvas>
         <h2 className = "text-primary m-2">You can upload a file above or use the mouse to draw in the HTML canvas.</h2>
         <button className = "btn btn-outline-warning m-2 fs-3" onClick = {(e) => clear(e)}>Clear</button>
         <button className = "btn btn-outline-success m-2 fs-3" onClick = {() => handleClick()}>Predict</button>
         {Predicting(loading)}
         {Prediction(pred)}
+        <canvas className = "border-2 border-primary float-start m-2" ref = {canvasRef} width = "300" height = "300" style = {{border: "3px solid #000000"}}
+            onMouseMove = {(e) => handleMouseMove(e)}
+            onMouseDown = {() => {clicked = true;}}
+            onMouseUp = {() => {clicked = false;}}>
+        </canvas>
     </>
 }
 
