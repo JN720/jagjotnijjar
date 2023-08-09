@@ -127,7 +127,7 @@ function Voice() {
             <h1 className = "text-primary text-center" style = {{fontSize : 90}}>Voice Classification</h1>
             <h1 className = "text-secondary text-center">Spectral Analysis and Bioacoustics using Deep Learning</h1>
         </div>
-        <div className = "container float-start w-25 h-50">
+        <div className = "container float-start w-25 h-50 ps-4">
             {!recording ? (<button className = "btn btn-outline-info m-2 fs-3" onClick = {() => handleBeginRecord()}>Begin Recording</button>) : null}
             {(permission && recording) ? (<button className = "btn btn-outline-danger m-2 fs-3" onClick = {() => handleEndRecord()}>End Recording</button>) : null}
             {canPredict ? (<button className = "btn btn-outline-success m-2 fs-3" onClick = {() => handleClick(audio)}>Predict</button>) : null}

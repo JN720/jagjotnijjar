@@ -61,7 +61,7 @@ function Letter() {
         }
     }
     return (
-        <div className = {"w-100 trans-7" + (anim ? " fade up" : "")}>
+        <div className = {"w-100 trans-7 mt-5" + (anim ? " fade up" : "")}>
             <h1 className = "text-primary text-center" style = {{fontSize : 100}}>Handwritten Letter Detection</h1>
             <h1 className = "text-secondary text-center">Computer Vision and Full-Stack AI Deployment</h1>
             <div className = "container float-start w-50">
