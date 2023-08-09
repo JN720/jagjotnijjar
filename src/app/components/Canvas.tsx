@@ -67,7 +67,7 @@ function Canvas() {
     function handleClick() {
         setLoading(true);
         const canvas: any = canvasRef.current;
-        const image = canvas.toDataURL('image/png');
+        const image = canvas.toBlob('image/png');
 
         if (image == null || image == undefined) {
             setPrediction("Null");
