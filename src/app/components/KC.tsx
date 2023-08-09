@@ -30,7 +30,7 @@ function KC() {
                 <p className = "fs-1 ms-2">The project is on the following links:</p>
                 <Link href = "https://replit.com/@JN720/KineticChance" target = "blank" className = "fs-1 text-center ms-2">2 Player Version</Link>
                 <div className = "w-100"></div>
-                <Link href = "https://github.com/JN720/kineticchance" target = "blank" className = "fs-1 text-center m-2">AI Version on Github</Link>
+                <Link href = "https://github.com/JN720/kinetic-chance" target = "blank" className = "fs-1 text-center m-2">AI Version on Github</Link>
                 
             </div>
         </div>
