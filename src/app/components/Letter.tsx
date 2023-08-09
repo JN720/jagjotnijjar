@@ -1,5 +1,7 @@
 "use client";
-import { useState } from "react";
+
+import Canvas from "./Canvas";
+import { useState, useRef, useEffect } from "react";
 const axios = require('axios');
 
 async function predict(img: File | null) {
@@ -39,11 +41,11 @@ function Predicting(p: boolean) {
 }
 
 
-
 function Letter() {
     const [image, setImage] = useState<File | null | undefined>(null);
     const [pred, setPrediction] = useState("");
     const [loading, setLoading] = useState(false);
+
     function handleClick() {
         setLoading(true);
         if (image == null || image == undefined) {
@@ -73,6 +75,8 @@ function Letter() {
                 <button className = "btn btn-outline-success m-2 fs-3" onClick = {() => handleClick()}>Predict</button>
                 {Predicting(loading)}
                 {Prediction(pred)}
+                <div className = "w-100"></div>
+                <Canvas/>
             </div>
             
         </div>
