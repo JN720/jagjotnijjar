@@ -11,13 +11,13 @@ function Nav(active: number) {
                 <div className = "navbar-collapse collapse">
                     <ul className = "navbar-nav d-flex flex-row">
                         <li className = "nav-item">
-                            <Link className = {active == 0 ? "nav-link active fs-2 mx-4" : "text-primary nav-link fs-2 mx-4"} href = "/">Home</Link>
+                            <Link className = {active == 0 ? "text-light nav-link fs-2 mx-4" : "text-primary nav-link fs-2 mx-4"} href = "/">Home</Link>
                         </li>
                         <li className = "nav-item">
-                            <Link className = {active == 1 ? "nav-link active fs-2 mx-4" : "text-primary nav-link fs-2 mx-4"} href = "/projects">Projects</Link>
+                            <Link className = {active == 1 ? "text-light nav-link fs-2 mx-4" : "text-primary nav-link fs-2 mx-4"} href = "/projects">Projects</Link>
                         </li>
                         <li className = "nav-item">
-                            <Link className = {active == 2 ? "nav-link active fs-2 mx-4" : "text-primary nav-link fs-2 mx-4"} href = "#">Coming Soon</Link>
+                            <Link className = {active == 2 ? "text-light nav-link fs-2 mx-4" : "text-primary nav-link fs-2 mx-4"} href = "#">Coming Soon</Link>
                         </li>
                         <li className = "nav-item">
                             <Link className = "text-primary nav-link mx-2" href = "https://www.linkedin.com/in/jagjot-nijjar-9b6300249/" target = "blank">
@@ -25,7 +25,7 @@ function Nav(active: number) {
                             </Link>
                         </li>
                         <li className = "nav-item">
-                            <Link className = "text-primary nav-link mx-2 bg-light" href = "https://github.com/JN720" target = "blank">
+                            <Link className = "text-primary nav-link mx-2" href = "https://github.com/JN720" target = "blank">
                                 <Image src = {ghlogo} height = "60" alt = "Github"/>
                             </Link>
                         </li>
