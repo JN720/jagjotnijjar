@@ -123,11 +123,11 @@ function skillCircle(index: number, size: number) {
 
 function listSkill(index: number, size: number) {
     return <>
-        <div className = {"card align-items-center align-text-center px-3 h-100 border-2" + (skillProfs[index] == 5 ? " border-primary" : "")}>
+        <div className = {"bg-less-dark card align-items-center align-text-center px-3 h-100 border-2" + (skillProfs[index] == 5 ? " border-primary" : " border-light")}>
             <Image src = {skillImages[index]} className = {"align-self-center mt-2"} height = {size} alt = {skillNames[index] + " Logo"}/>
             <div className = "card-body">
                 <h2 className = "card-title text-primary text-center">{skillNames[index]}</h2>
-                <p className = "card-text fs-5 text-center">{skillDescs[index]}</p>
+                <p className = "card-text fs-5 text-center text-light">{skillDescs[index]}</p>
             </div>
             {skillCircle(index, 40)}
         </div>

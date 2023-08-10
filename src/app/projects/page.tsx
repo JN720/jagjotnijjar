@@ -7,9 +7,9 @@ function Projects() {
     return <>
         {Nav(1)}
         <KC/>
-        <div className = "w-100 text-light">-</div>
+        <div className = "w-100 text-dark">.</div>
         <Voice/>
-        <div className = "w-100 text-light">-</div>
+        <div className = "w-100 text-dark">.</div>
         <Letter/>
     </>
 }

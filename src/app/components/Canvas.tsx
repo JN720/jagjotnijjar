@@ -85,7 +85,7 @@ function Canvas() {
         <button className = "btn btn-outline-success m-2 fs-3" onClick = {() => handleClick()}>Predict</button>
         {Predicting(loading)}
         {Prediction(pred)}
-        <canvas className = "border-2 border-primary float-start m-2" ref = {canvasRef} width = "300" height = "300" style = {{border: "3px solid"}}
+        <canvas className = "border-2 border-primary float-start m-2 bg-light" ref = {canvasRef} width = "300" height = "300" style = {{border: "3px solid"}}
             onMouseMove = {(e) => handleMouseMove(e)}
             onMouseDown = {() => {clicked = true;}}
             onMouseUp = {() => {clicked = false;}}>

@@ -1,7 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.css'
+import './main.css'
 import type { Metadata } from 'next'
-
-
 
 export const metadata: Metadata = {
   title: 'Jagjot Nijjar',

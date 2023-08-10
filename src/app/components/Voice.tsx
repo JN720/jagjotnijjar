@@ -137,7 +137,7 @@ function Voice() {
             {Prediction(prediction)}
         </div>
         <div className = "float-end w-75 h-50">
-            <p className = "text-primary fs-4 pe-4">
+            <p className = "fs-4 pe-4 text-light">
                 As my first venture into audio-based machine learning, I built this classifier to recognize voice audio 
                 and attempt to discern the gender of the speaker. The first model, and the one deployed here, employs a 
                 Mel Spectrogram in order to create a 2D representation of the audio frequencies, which is fed into a 

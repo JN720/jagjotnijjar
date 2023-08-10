@@ -1,0 +1,12 @@
+$primary: #7070ff;
+$secondary: #c0c0c0;
+//$info: #9090ff;
+//$body-bg: #747474;
+$body-bg: #101010;
+
+.bg-less-dark {
+    background-color: #505050;
+}
+
+//@import "bootstrap/dist/css/bootstrap.css";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss"

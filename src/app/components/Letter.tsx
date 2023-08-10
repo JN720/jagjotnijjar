@@ -65,7 +65,7 @@ function Letter() {
             <h1 className = "text-primary text-center" style = {{fontSize : 100}}>Handwritten Letter Detection</h1>
             <h1 className = "text-secondary text-center">Computer Vision and Full-Stack AI Deployment</h1>
             <div className = "container float-start w-50">
-                <p className = "text-primary fs-4 ps-4">
+                <p className = "fs-4 ps-4 text-light">
                     This project is a revamp of an earlier Keras model, now made in PyTorch. Originally, the project used Flask and standard HTML in Jinja 
                     templates, however in the current rendition, it runs using Next.js with React. The inference endpoint is deployed on a FastAPI server 
                     hosted on Microsoft Azure and an Express.js API hosted on AWS is hooked up to MongoDB to store all images used on this website for 

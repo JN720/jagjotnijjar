@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import ghlogo from "./assets/gitlogo.png";
+import ghlogo from "./assets/githublogo.png";
 import lilogo from "./assets/lilogo.png";
 
 function Nav(active: number) {
@@ -21,11 +21,11 @@ function Nav(active: number) {
                         </li>
                         <li className = "nav-item">
                             <Link className = "text-primary nav-link mx-2" href = "https://www.linkedin.com/in/jagjot-nijjar-9b6300249/" target = "blank">
-                            <Image src = {lilogo} height = "60" alt = "LinkedIn"/>
+                                <Image src = {lilogo} height = "60" alt = "LinkedIn"/>
                             </Link>
                         </li>
                         <li className = "nav-item">
-                            <Link className = "text-primary nav-link mx-2" href = "https://github.com/JN720" target = "blank">
+                            <Link className = "text-primary nav-link mx-2 bg-light" href = "https://github.com/JN720" target = "blank">
                                 <Image src = {ghlogo} height = "60" alt = "Github"/>
                             </Link>
                         </li>

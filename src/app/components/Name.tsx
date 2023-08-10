@@ -10,9 +10,9 @@ function Name() {
         setAnim(false);
     }, [])
     return (
-        <div className = {"card align-items-center py-4 trans-3" + (anim ? " fade" : "")}>
-            <h1 style = {{fontSize : 90}}>Greetings,</h1>
-            <h1 style = {{fontSize : 90}}>my name is Jagjot</h1>
+        <div className = {"py-4 trans-3" + (anim ? " fade" : "")}>
+            <h1 style = {{fontSize : 90}} className = "text-light text-center">Greetings,</h1>
+            <h1 style = {{fontSize : 90}} className = "text-light text-center">my name is Jagjot</h1>
         </div>
     )
 }
