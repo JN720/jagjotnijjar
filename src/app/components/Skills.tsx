@@ -108,7 +108,7 @@ function c(n: number) {
 */
 
 const skillProfs = [
-    5, 5, 4, 4, 4, 4, 3, 3, 5, 5, 4, 5, 4, 3, 3, 3, 3, 3, 3, 3
+    5, 5, 4, 4, 4, 5, 3, 3, 5, 5, 4, 5, 4, 4, 3, 3, 4, 3, 3, 5
 ]
 
 function skillCircle(index: number, size: number) {

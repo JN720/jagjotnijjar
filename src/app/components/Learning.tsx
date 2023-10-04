@@ -1,22 +1,21 @@
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import huglogo from "./assets/huglogo.png";
-import langlogo from "./assets/langlogo.png";
+import langlogo from "./assets/redislogo.png";
 
 const skills: number[] = [0, 1];
 
 const skillImages: StaticImageData[] = [huglogo, langlogo];
 
-const skillNames: string[] = ['Hugging Face Transformers', 'LangChain'];
+const skillNames: string[] = ['Hugging Face Transformers', 'Redis'];
 
 const skillDescs: string[] = [
     'With the goal of learning NLP, one important software to work with is HuggingFace, specifically with the transformers library' +
     ' due to the prominence of transfer learning within the field. Having experience in other Machine Learning frameworks, PyTorch ' +
     ' especially, I am learning to use and fine-tune pretrained models to create more effective models not only in NLP, but also in' +
     ' other areas such as vision and audio.',
-    'For NLP, another powerful tool I am learning is LangChain. While a single LLM can be powerful, I want to also be able to work' +
-    ' with chains of LLMs to produce far more advanced results. Currently, I am planning to take a high-performant uncensored LLM' +
-    ' and fine-tune my own censoring LLM to revise the responses, composing a chain of 2 lightweight LLMs for superior performance.'
+    'In order to improve user experience, I have been learning Redis in order to implement database caching. Alongside currently' +
+    ' working with PostgreSQL for my next project, I am implementing Redis as a caching layer to speed up messages and authentication.'
 ];
 
 function listSkill(index: number, size: number) {
