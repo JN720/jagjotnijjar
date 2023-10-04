@@ -53,10 +53,10 @@ const skillDescs: string[] = [
     " I used JS throughout high school for my AP Computer Science classes as well as for simple web development. More recently," +
     " I have began learning React to create visually pleasing sites to showcase my other skills and solidify my Full-Stack skills.",
     "I also have a good foundation of Java set to grow significantly in the near future. Though I have used Java back in high school," + 
-    " my upcoming advanced university coursework will utilize it. I also plan to learn the Spring framework within the next 2 months",
+    " I now utilize it in university coursework. I also plan to learn the Spring framework soon.",
     "While JavaScript is important for the dynamics of webpages, I also have a good grasp of the fundamentals of front-end with" + 
     " HTML. Both with Flask and React, I have applied HTML as the foundation of the website structure.",
-    "SQL, particularly MySQL and soon Postgres as well, is an essential skill I carry since when it comes to data and performing AI-powered" +
+    "SQL, particularly MySQL and Postgres, is an essential skill I carry since when it comes to user data and performing AI-powered" +
     " analytics for working with databases is essential. Likewise, my database skills fulfil a component of proper Full-Stack Development.",
     "C# is a language I developed a decent proficiency in beginning a few years ago while working with Unity for Game Development. Though I" +
     " use it less often, it still bolsters my abilities to work in several software paradigms due to its versatility.",
@@ -108,7 +108,7 @@ function c(n: number) {
 */
 
 const skillProfs = [
-    5, 5, 4, 4, 4, 5, 3, 3, 5, 5, 4, 5, 4, 4, 3, 3, 4, 3, 3, 5
+    5, 5, 5, 4, 4, 5, 3, 3, 5, 5, 4, 5, 4, 4, 3, 3, 4, 3, 3, 5
 ]
 
 function skillCircle(index: number, size: number) {
