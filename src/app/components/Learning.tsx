@@ -1,21 +1,21 @@
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import huglogo from "./assets/huglogo.png";
-import langlogo from "./assets/redislogo.png";
+import pyglogo from "./assets/pyglogo.png";
 
 const skills: number[] = [0, 1];
 
-const skillImages: StaticImageData[] = [huglogo, langlogo];
+const skillImages: StaticImageData[] = [huglogo, pyglogo];
 
-const skillNames: string[] = ['Hugging Face Transformers', 'Redis'];
+const skillNames: string[] = ['Hugging Face Transformers', 'Pytorch Geometric'];
 
 const skillDescs: string[] = [
     'With the goal of learning NLP, one important software to work with is HuggingFace, specifically with the transformers library' +
-    ' due to the prominence of transfer learning within the field. Having experience in other Machine Learning frameworks, PyTorch ' +
+    ' due to the prominence of transfer learning within the field. Having experience in other Machine Learning frameworks, PyTorch' +
     ' especially, I am learning to use and fine-tune pretrained models to create more effective models not only in NLP, but also in' +
     ' other areas such as vision and audio.',
-    'In order to improve user experience, I have been learning Redis in order to implement database caching. Alongside currently' +
-    ' working with PostgreSQL for my next project, I am implementing Redis as a caching layer to speed up messages and authentication.'
+    'Having done Machine Learning with vision, audio, and currently doing it with natural language processing, I have begun learning' +
+    ' Pytorch Geometric in order to extend my current ML skillset into graph-based data and plan to utilize it in future projects.'
 ];
 
 function listSkill(index: number, size: number) {

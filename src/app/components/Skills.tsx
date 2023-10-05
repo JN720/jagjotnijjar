@@ -20,6 +20,10 @@ import nextlogo from "./assets/nextlogo.png";
 import mongologo from "./assets/mongologo.png";
 import bslogo from "./assets/bslogo.png";
 import falogo from "./assets/falogo.png";
+import twlogo from "./assets/twlogo.png";
+import azurelogo from "./assets/azurelogo.png";
+import gcplogo from "./assets/gcplogo.png";
+import redislogo from "./assets/redislogo.png";
 import ec from "./assets/ec.png";
 import fc from "./assets/fc.png";
 
@@ -29,23 +33,25 @@ const skills: number[][] = [
     [4, 5, 6, 7],
     [8, 9, 10, 11],
     [12, 13, 14, 15],
-    [16, 17, 18, 19]
+    [16, 17, 18, 19],
+    [20, 21, 22]
 ];
 
 const skillNames: string[] = [
     "Python", "C++", "JavaScript", "Java", "HTML", "SQL", "C#", "R", "PyTorch", 
     "Keras", "Sci-Kit Learn", "Flask", "Express", "React", "Git", "Amazon Web Services",
-    "Next", "MongoDB", "Bootstrap", "FastAPI"
+    "Next", "MongoDB", "Bootstrap", "FastAPI", "Tailwind CSS", "Microsoft Azure", 
+    "Google Cloud", "Redis"
 ];
 
 const skillImages: StaticImageData[] = [
     pylogo, cpplogo, jslogo, javalogo, htmllogo, sqllogo, csharplogo, rlogo, torchlogo, 
     keraslogo, sklearnlogo, flasklogo, expresslogo, reactlogo, gitlogo, awslogo, nextlogo,
-    mongologo, bslogo, falogo
+    mongologo, bslogo, falogo, twlogo, azurelogo, gcplogo, redislogo
 ];
 
 const skillDescs: string[] = [
-    "I have worked with Python for several years and since 2021 have been using it for building machine learning models using" +
+    "I have worked with Python for several years and since 2021 have been using it for building Machine Learning models using" +
     " ML frameworks such as PyTorch, Keras, and Sci-Kit Learn as well as Flask for web development.",
     "As my second strongest language, I have extensively used C++ throughout the past 2 years and have applied it in a version" +
     " of my original Chance game as well as throughout my academic coursework.",
@@ -87,7 +93,14 @@ const skillDescs: string[] = [
     " API to connect to MongoDB.", 
     "For frontend, I have a good proficiency in Bootstrap to handle making visually appealing websites like this one. Though Bootstrap is" +
     " somewhat limiting in regards to creative styling, I do plan to learn other CSS frameworks such as Tailwind for future front-end endeavors.", 
-    "In addition to Express, I also know FastAPI to specialize in developing API's, particularly for my AI models as they use Python frameworks."
+    "In addition to Express, I also know FastAPI to specialize in developing API's, particularly for my AI models as they use Python frameworks.",
+    "Having worked with boostrap, for my current project I am using Tailwind CSS for more fine-tuned styling",
+    "Both this website and the project I am working on utilize Microsoft Azure to deploy my ML APIs. Additionally, I have also looked at Azure ML" +
+    " and may use it for future projects for larger-scale AI projects.",
+    "In addition to Machine Learning APIs, I also redeployed the database management API for this website onto Google Cloud. Having used 3 of the" +
+    " largest cloud providers, I now have a stronger general sense of cloud computing as a whole.",
+    "In order to improve user experience with performance, I have been using Redis in order to implement database caching. Alongside currently" +
+    " working with PostgreSQL for my next project, I am implementing Redis as a caching layer to speed up messages and authentication."
 ];
 
 function c(n: number) {
@@ -108,7 +121,7 @@ function c(n: number) {
 */
 
 const skillProfs = [
-    5, 5, 5, 4, 4, 5, 3, 3, 5, 5, 4, 5, 4, 4, 3, 3, 4, 3, 3, 5
+    5, 5, 5, 4, 4, 5, 3, 3, 5, 5, 4, 5, 4, 4, 3, 3, 4, 3, 3, 5, 3, 3, 3
 ]
 
 function skillCircle(index: number, size: number) {
