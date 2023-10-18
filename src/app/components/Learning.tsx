@@ -1,19 +1,18 @@
 import { StaticImageData } from "next/image";
 import Image from "next/image";
-import huglogo from "./assets/huglogo.png";
+import flutterlogo from "./assets/flutterlogo.png";
 import pyglogo from "./assets/pyglogo.png";
 
 const skills: number[] = [0, 1];
 
-const skillImages: StaticImageData[] = [huglogo, pyglogo];
+const skillImages: StaticImageData[] = [flutterlogo, pyglogo];
 
-const skillNames: string[] = ['Hugging Face Transformers', 'Pytorch Geometric'];
+const skillNames: string[] = ['Flutter', 'Pytorch Geometric'];
 
 const skillDescs: string[] = [
-    'With the goal of learning NLP, one important software to work with is HuggingFace, specifically with the transformers library' +
-    ' due to the prominence of transfer learning within the field. Having experience in other Machine Learning frameworks, PyTorch' +
-    ' especially, I am learning to use and fine-tune pretrained models to create more effective models not only in NLP, but also in' +
-    ' other areas such as vision and audio.',
+    'As my first venture into cross-platform development, I have been beginning to learn Flutter for the eCommerce simulator' +
+    ' I am collaborating on. As part of it, I am also learning to use the Dart language in general as well as foundational' +
+    ' concepts in mobile and desktop app development.',
     'Having done Machine Learning with vision, audio, and currently doing it with natural language processing, I have begun learning' +
     ' Pytorch Geometric in order to extend my current ML skillset into graph-based data and plan to utilize it in future projects.'
 ];

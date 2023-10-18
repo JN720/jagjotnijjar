@@ -24,6 +24,10 @@ import twlogo from "./assets/twlogo.png";
 import azurelogo from "./assets/azurelogo.png";
 import gcplogo from "./assets/gcplogo.png";
 import redislogo from "./assets/redislogo.png";
+import huglogo from "./assets/huglogo.png";
+import gologo from "./assets/gologo.png";
+import ginlogo from "./assets/ginlogo.png";
+import dartlogo from "./assets/dartlogo.png";
 import ec from "./assets/ec.png";
 import fc from "./assets/fc.png";
 
@@ -34,7 +38,8 @@ const skills: number[][] = [
     [8, 9, 10, 11],
     [12, 13, 14, 15],
     [16, 17, 18, 19],
-    [20, 21, 22, 23]
+    [20, 21, 22, 23],
+    [24, 25, 26, 27]
 ];
 
 const skillNames: string[] = [
@@ -47,27 +52,28 @@ const skillNames: string[] = [
 const skillImages: StaticImageData[] = [
     pylogo, cpplogo, jslogo, javalogo, htmllogo, sqllogo, csharplogo, rlogo, torchlogo, 
     keraslogo, sklearnlogo, flasklogo, expresslogo, reactlogo, gitlogo, awslogo, nextlogo,
-    mongologo, bslogo, falogo, twlogo, azurelogo, gcplogo, redislogo
+    mongologo, bslogo, falogo, twlogo, azurelogo, gcplogo, redislogo, huglogo, gologo,
+    ginlogo, dartlogo
 ];
 
 const skillDescs: string[] = [
     "I have worked with Python for several years and since 2021 have been using it for building Machine Learning models using" +
     " ML frameworks such as PyTorch, Keras, and Sci-Kit Learn as well as Flask for web development.",
-    "As my second strongest language, I have extensively used C++ throughout the past 2 years and have applied it in a version" +
+    "As another strong language, I have extensively used C++ throughout the past 2 years and have applied it in a version" +
     " of my original Chance game as well as throughout my academic coursework.",
     "Behind the first two, Javascript and by extension Typescript as well are also languages I have a strong foundation in." +
     " I used JS throughout high school for my AP Computer Science classes as well as for simple web development. More recently," +
-    " I have began learning React to create visually pleasing sites to showcase my other skills and solidify my Full-Stack skills.",
-    "I also have a good foundation of Java set to grow significantly in the near future. Though I have used Java back in high school," + 
-    " I now utilize it in university coursework. I also plan to learn the Spring framework soon.",
+    " I have recently used React to create visually pleasing sites to showcase my other skills and solidify my Full-Stack skills.",
+    "I also have a robust foundation of Java that I have recently been cultivating. Though I have used Java back in high school," + 
+    " I now utilize it in university coursework. I also plan to learn the Spring framework in the future.",
     "While JavaScript is important for the dynamics of webpages, I also have a good grasp of the fundamentals of front-end with" + 
     " HTML. Both with Flask and React, I have applied HTML as the foundation of the website structure.",
     "SQL, particularly MySQL and Postgres, is an essential skill I carry since when it comes to user data and performing AI-powered" +
-    " analytics for working with databases is essential. Likewise, my database skills fulfil a component of proper Full-Stack Development.",
+    " analytics for working with databases is essential. Likewise, my database skills fulfill a component of Full-Stack Development.",
     "C# is a language I developed a decent proficiency in beginning a few years ago while working with Unity for Game Development. Though I" +
     " use it less often, it still bolsters my abilities to work in several software paradigms due to its versatility.",
     "Because of the prevalance of statistics in AI and Data Science, I have a moderate proficiency in R as well. In particular, I" +
-    " applied it in order to use a bioacoustic analysis library for the old model in my Voice Classification Project.",
+    " applied it in order to use a bio-acoustic analysis library for the old model in my Voice Classification Project.",
     "My strongest and most-used framework is PyTorch. From vision, to audio, to NLP, to Reinforcement Learning, I have a deep understanding" +
     " of PyTorch and have built countless models using it. I have utilized it in virtually every Deep Learning project since I learnt it, and" +
     " plan to continue using it.",
@@ -94,17 +100,27 @@ const skillDescs: string[] = [
     "For frontend, I have a good proficiency in Bootstrap to handle making visually appealing websites like this one. Though Bootstrap is" +
     " somewhat limiting in regards to creative styling, I do plan to learn other CSS frameworks such as Tailwind for future front-end endeavors.", 
     "In addition to Express, I also know FastAPI to specialize in developing API's, particularly for my AI models as they use Python frameworks.",
-    "Having worked with boostrap, for my current project I am using Tailwind CSS for more fine-tuned styling",
+    "Having worked with Bootstrap, I have, in my previous project, utilized Tailwind CSS for more fine-tuned styling.",
     "Both this website and the project I am working on utilize Microsoft Azure to deploy my ML APIs. Additionally, I have also looked at Azure ML" +
     " and may use it for future projects for larger-scale AI projects.",
     "In addition to Machine Learning APIs, I also redeployed the database management API for this website onto Google Cloud. Having used 3 of the" +
     " largest cloud providers, I now have a stronger general sense of cloud computing as a whole.",
     "In order to improve user experience with performance, I have been using Redis in order to implement database caching. Alongside currently" +
-    " working with PostgreSQL for my next project, I am implementing Redis as a caching layer to speed up messages and authentication."
+    " working with PostgreSQL for my next project, I am implementing Redis as a caching layer to speed up messages and authentication.",
+    "For NLP, and especially generative AI, I use HuggingFace, specifically with the transformers library. Beyond being able to utilize" +
+    " LLM's, due to the prominence of fine-tuning within the field. knowing HuggingFace complements other Machine Learning frameworks.",
+    "Recently, I have spent time learning Go, particularly for the web. Rather than typically using JavaScript or Python for many tasks," +
+    " I am also now familiar with Go for more performance-demanding situations.",
+    "In order to use Go for APIs, I have swiftly become familiar with the Gin framework in order to more effectively create complex API" +
+    " routes.",
+    "As part of learning Flutter, I have learned the basics of Dart. However, I also have aspirations to use dart for future" +
+    " cross-platform endeavors."
 ];
 
 function c(n: number) {
     switch (n) {
+        case 2:
+            return [fc, fc, ec, ec, ec];
         case 3:
             return [fc, fc, fc, ec, ec];
         case 4:
@@ -115,13 +131,8 @@ function c(n: number) {
     return [ec, ec, ec, ec, ec]
 }
 
-/*var skillProfs: StaticImageData[][] = [
-    c(5), c(5), c(4), c(4), c(4), c(4), c(3), c(3), c(5), c(5), c(4), c(5), c(4), c(3), c(5), c(3), c(3), c(3), c(3), c(3)
-];
-*/
-
 const skillProfs = [
-    5, 5, 5, 4, 4, 5, 3, 3, 5, 5, 4, 5, 4, 4, 3, 3, 4, 3, 3, 5, 3, 3, 3, 3
+    5, 5, 5, 4, 4, 5, 3, 2, 5, 5, 4, 5, 4, 4, 3, 3, 4, 3, 3, 5, 3, 3, 3, 3, 3, 3, 2, 2
 ]
 
 function skillCircle(index: number, size: number) {
