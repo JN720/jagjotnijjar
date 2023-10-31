@@ -46,7 +46,7 @@ const skillNames: string[] = [
     "Python", "C++", "JavaScript", "Java", "HTML", "SQL", "C#", "R", "PyTorch", 
     "Keras", "Sci-Kit Learn", "Flask", "Express", "React", "Git", "Amazon Web Services",
     "Next", "MongoDB", "Bootstrap", "FastAPI", "Tailwind CSS", "Microsoft Azure", 
-    "Google Cloud", "Redis"
+    "Google Cloud", "Redis", "HuggingFace", "Go", "Gin", "Dart"
 ];
 
 const skillImages: StaticImageData[] = [
