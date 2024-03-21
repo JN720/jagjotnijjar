@@ -1,19 +1,18 @@
 import { StaticImageData } from "next/image";
 import Image from "next/image";
-import flutterlogo from "./assets/flutterlogo.png";
+import springlogo from "./assets/springlogo.svg";
 import pyglogo from "./assets/pyglogo.png";
 
 const skills: number[] = [0, 1];
 
-const skillImages: StaticImageData[] = [flutterlogo, pyglogo];
+const skillImages: StaticImageData[] = [springlogo, pyglogo];
 
-const skillNames: string[] = ['Flutter', 'Pytorch Geometric'];
+const skillNames: string[] = ['Spring', 'PyTorch Geometric'];
 
 const skillDescs: string[] = [
-    'As my first venture into cross-platform development, I have been beginning to learn Flutter for the eCommerce simulator' +
-    ' I am collaborating on. As part of it, I am also learning to use the Dart language in general as well as foundational' +
-    ' concepts in mobile and desktop app development.',
-    'Having done Machine Learning with vision, audio, and currently doing it with natural language processing, I have begun learning' +
+    'For the near future, I am planning to create a desktop chat application with a backend using Spring with Kotlin, particularly Spring Boot.' +
+    ' While I have worked with multiple backend frameworks in other languages, I am new to both Spring and Kotlin and will be learning both simultaneously',
+    'Having done Machine Learning with vision, audio, and having done natural language processing in a more applied manner, I have begun learning' +
     ' Pytorch Geometric in order to extend my current ML skillset into graph-based data and plan to utilize it in future projects.'
 ];
 

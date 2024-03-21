@@ -10,7 +10,7 @@ function KC() {
         setAnim(false);
     }, []);
     return <>
-        <div className = {"container-fluid w-100 h-50 trans-3" + (anim ? " fade left" : "")}>
+        <div className = {"container-fluid w-100 h-50 mb-5 pb-5 trans-3" + (anim ? " fade left" : "")}>
             <h1 className = "text-primary text-center" style = {{fontSize : 90}}>Kinetic Chance</h1>
             <h1 className = "text-secondary text-center">Multi-Agent Reinforcement Learning with 2D Game Development</h1>
             <div className = "float-start w-75">
